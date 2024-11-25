@@ -1,0 +1,775 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F83412FB-6607-480D-92C5-26D4EC8C72B3}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>The_Big_Egyptian_Quiz</RootNamespace>
+    <AssemblyName>The Big Egyptian Quiz</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AvatarScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AvatarScreen.Designer.cs">
+      <DependentUpon>AvatarScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EndScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EndScreen.Designer.cs">
+      <DependentUpon>EndScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HelpScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HelpScreen.Designer.cs">
+      <DependentUpon>HelpScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LeaderboardScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LeaderboardScreen.Designer.cs">
+      <DependentUpon>LeaderboardScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LoginScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginScreen.Designer.cs">
+      <DependentUpon>LoginScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PasswordScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PasswordScreen.Designer.cs">
+      <DependentUpon>PasswordScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Player.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="qTypeThree.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="qTypeThree.Designer.cs">
+      <DependentUpon>qTypeThree.cs</DependentUpon>
+    </Compile>
+    <Compile Include="qTypeOne.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="qTypeOne.Designer.cs">
+      <DependentUpon>qTypeOne.cs</DependentUpon>
+    </Compile>
+    <Compile Include="qTypeFour.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="qTypeFour.Designer.cs">
+      <DependentUpon>qTypeFour.cs</DependentUpon>
+    </Compile>
+    <Compile Include="qTypeTwo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="qTypeTwo.Designer.cs">
+      <DependentUpon>qTypeTwo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Question.cs" />
+    <Compile Include="RegisterScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RegisterScreen.Designer.cs">
+      <DependentUpon>RegisterScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="qType3img.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>qType3img.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Serializer.cs" />
+    <Compile Include="SplashScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SplashScreen.Designer.cs">
+      <DependentUpon>SplashScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sprites.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Sprites.resx</DependentUpon>
+    </Compile>
+    <Compile Include="TopicScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TopicScreen.Designer.cs">
+      <DependentUpon>TopicScreen.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AvatarScreen.resx">
+      <DependentUpon>AvatarScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EndScreen.resx">
+      <DependentUpon>EndScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HelpScreen.resx">
+      <DependentUpon>HelpScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LeaderboardScreen.resx">
+      <DependentUpon>LeaderboardScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginScreen.resx">
+      <DependentUpon>LoginScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PasswordScreen.resx">
+      <DependentUpon>PasswordScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="qTypeThree.resx">
+      <DependentUpon>qTypeThree.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="qTypeOne.resx">
+      <DependentUpon>qTypeOne.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="qTypeFour.resx">
+      <DependentUpon>qTypeFour.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="qTypeTwo.resx">
+      <DependentUpon>qTypeTwo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RegisterScreen.resx">
+      <DependentUpon>RegisterScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="qType3img.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>qType3img.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sprites.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Sprites.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SplashScreen.resx">
+      <DependentUpon>SplashScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TopicScreen.resx">
+      <DependentUpon>TopicScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Blank 1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\8-Bit Gif.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Eye of Horus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\No Eye.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Blank 3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Papyrus.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\abydos %2849%29.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\People Running.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Heiroglyphs 7.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Heh %28As Chaos%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cat no Wings.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cat Wings.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ankh.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Copy of DSC00415.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\result %281%291.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\result %281%29 - Copy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\result %282%29 - Copy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\result %282%29 - Copy1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Normal Arrow %28%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\result %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\result %283%29 - Copy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\result %283%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\saqqara mastaba statue.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tapestry 4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\5dia_0346.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kisspng-ancient-egypt-scarab-jewellery-amulet-egyptian-scarab-beetle-5b411c4915c919.5764966215309937370893.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ra Flat R.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_0_001.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_0_002.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_0_003.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_0_004.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_1_001.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_1_002.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_1_003.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_1_004.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_2_001.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_2_002.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_2_003.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_2_004.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\111.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\112.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\113.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\114.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\121.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\122.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\123.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\124.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\131.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\132.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\133.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\134.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\141.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\142.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\143.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\144.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\211.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\212.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\213.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\214.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\221.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\222.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\223.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\224.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\231.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\232.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\233.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\234.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\241.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\242.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\243.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\244.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\311.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\312.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\313.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\314.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\321.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\322.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\323.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\324.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\331.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\332.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\333.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\334.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\341.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\342.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\343.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\344.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\411.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\412.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\413.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\414.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\421.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\422.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\423.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\424.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\431.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\432.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\433.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\434.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\441.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\442.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\443.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\444.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\%280%29001.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\%280%29002.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\%280%29003.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\%280%29004.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\%281%29001.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\%281%29002.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\%281%29003.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\%281%29004.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\%282%29001.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\%282%29002.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\%282%29003.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\%282%29004.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\51afd3e7fa460ee0d95bc408a4dcae4a.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pixil-frame-0.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Heiroglyphs 4.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PICT0071.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tomb 2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\360_F_512047299_USY1cmn23m8yaSC9yeYmtGnvR8MH39zg.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fArrow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Wings Woman 1.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\No Wings Woman 1.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BG3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BG1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BG7.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BG2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Pick-a-god.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\7.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\6.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\5.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\4.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\blank.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mummy cat.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ra Flat R Head.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ra Flat L.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pixil-frame-1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Bin.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Canopic Jars 1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Canopic Jars 2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Canopic Jars 3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Canopic Jars 4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Liver.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Heart.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Intestines.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Lungs.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Brain.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Stomach.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Khepri.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BaBird.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Osiris.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Horus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Khnum.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Amulet.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ankh1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Beetle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cartouche.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Djed.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Eye of Ra.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BG4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Shiny gif.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BG5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BG6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\01_sphinx_head.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Rock.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Rock Pillow.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Quill_pen_transparency.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chess.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Wig.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Razor.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Dagger.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Sandals.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Sarcophagus.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Scarf.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Underwear.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ur.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Watch.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mapAnnex.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mapAntechamber.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mapBurial.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mapTreasury.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Right.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Wrong.wav" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
